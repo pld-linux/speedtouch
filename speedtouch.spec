@@ -2,12 +2,11 @@ Summary:	ALCATEL SpeedTouch USB ADSL modem user-space driver
 Summary(pl):	Sterownik przestrzeni u¿ytkownika dla modemów ADSL ALCATEL SpeedTouch na USB
 Name:		speedtouch
 Version:	1.2
-%define	beta	beta3
-Release:	0.%{beta}.2
+Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}-%{beta}.tar.bz2
-# Source0-md5:	33d9a6afe54d9e89c6c32e4443d5a2d8
+Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}.tar.bz2
+# Source0-md5:	fa55748175d14dcf8ebe22577df408b3
 URL:		http://speedtouch.sf.net/
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,7 +34,7 @@ Uwaga: modem_run potrzebuje pliku z firmware modemu od Alcatela
 (mgmt.o, alcaudsl.sys lub firmware.bin).
 
 %prep
-%setup -q -n %{name}-%{version}-%{beta}
+%setup -q
 
 %build
 cp -f /usr/share/automake/config.* .
@@ -68,6 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sbindir}/modem_run
 %attr(755,root,root) %{_sbindir}/pppoa2
 %attr(755,root,root) %{_sbindir}/pppoa3
+%{_datadir}/speedtouch
 %{_mandir}/man1/modem_run.1*
 %{_mandir}/man1/pppoa2.1*
 %{_mandir}/man1/pppoa3.1*
