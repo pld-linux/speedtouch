@@ -3,7 +3,7 @@ Summary(pl):	Sterownik przestrzeni u¿ytkownika dla modemów ADSL ALCATEL SpeedTou
 Name:		speedtouch
 Version:	1.2
 %define	beta	beta3
-Release:	0.%{beta}.1
+Release:	0.%{beta}.2
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}-%{beta}.tar.bz2
