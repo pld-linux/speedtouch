@@ -1,12 +1,12 @@
 Summary:	ALCATEL SpeedTouch USB ADSL modem user-space driver
 Summary(pl):	Sterownik przestrzeni u¿ytkownika dla modemów ADSL ALCATEL SpeedTouch na USB
 Name:		speedtouch
-Version:	1.2
+Version:	1.3
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}.tar.bz2
-# Source0-md5:	fa55748175d14dcf8ebe22577df408b3
+# Source0-md5:	51012dc3f19297d2fd31bb79e3e2040f
 URL:		http://speedtouch.sf.net/
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -48,9 +48,11 @@ cp -f /usr/share/automake/config.* .
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
+	bindir=$RPM_BUILD_ROOT%{_bindir} \
 	sbindir=$RPM_BUILD_ROOT%{_sbindir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
-	datadir=$RPM_BUILD_ROOT%{_datadir}
+	datadir=$RPM_BUILD_ROOT%{_datadir} \
+	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,6 +70,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sbindir}/pppoa2
 %attr(755,root,root) %{_sbindir}/pppoa3
 %{_datadir}/speedtouch
-%{_mandir}/man1/modem_run.1*
-%{_mandir}/man1/pppoa2.1*
-%{_mandir}/man1/pppoa3.1*
+%{_mandir}/man8/modem_run.8*
+%{_mandir}/man8/pppoa2.8*
+%{_mandir}/man8/pppoa3.8*
+# don't include speedtouch-{setup,start,stop} and hotplug* in current state,
+# they are ugly (only for 2.4.x + user-space, incompatible with rc-scripts
+# and not aware of our modutils etc.)
