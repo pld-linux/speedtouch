@@ -9,6 +9,7 @@ Group:		Applications/System
 Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}-%{beta}.tar.bz2
 # Source0-md5:	33d9a6afe54d9e89c6c32e4443d5a2d8
 URL:		http://speedtouch.sf.net/
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,6 +38,7 @@ Uwaga: modem_run potrzebuje pliku z firmware modemu od Alcatela
 %setup -q -n %{name}-%{version}-%{beta}
 
 %build
+cp -f /usr/share/automake/config.* .
 %configure \
 	--enable-syslog \
 	--enable-install=`id -nu`
