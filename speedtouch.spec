@@ -2,12 +2,12 @@ Summary:	ALCATEL SpeedTouch USB ADSL modem user-space driver
 Summary(pl):	Sterownik przestrzeni u¿ytkownika dla modemów ADSL ALCATEL SpeedTouch na USB
 Name:		speedtouch
 Version:	1.2
-%define	beta	beta2
+%define	beta	beta3
 Release:	0.%{beta}.1
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}-%{beta}.tar.bz2
-# Source0-md5:	450005ae68dc6b0323c54d4117460031
+# Source0-md5:	33d9a6afe54d9e89c6c32e4443d5a2d8
 URL:		http://speedtouch.sf.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,11 +57,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog TODO
-%doc doc-linux/{BUGS,FAQ,HDLC_BUG,results.txt,howto/SpeedTouch-HOWTO-en.html}
+%doc doc-linux/{BUGS,FAQ,HDLC_BUG,pppoax-doc-en.txt,results.txt,howto/SpeedTouch-HOWTO-en.html}
 %lang(de) %doc doc-linux/howto/SpeedTouch-HOWTO-de.html
 %lang(es) %doc doc-linux/howto/SpeedTouch-HOWTO-es.html
 %lang(fr) %doc doc-linux/howto/SpeedTouch-HOWTO-fr.html
 %lang(it) %doc doc-linux/howto/SpeedTouch-HOWTO-it.html
+%lang(nl) %doc doc-linux/howto/SpeedTouch-HOWTO-nl.html
 %attr(755,root,root) %{_sbindir}/modem_run
 %attr(755,root,root) %{_sbindir}/pppoa2
 %attr(755,root,root) %{_sbindir}/pppoa3
