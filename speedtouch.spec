@@ -11,7 +11,6 @@ Patch0:		%{name}-do_not_strip_g.patch
 URL:		http://speedtouch.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-Requires:	linux-atm
 Requires:	ppp-plugin-pppoatm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
