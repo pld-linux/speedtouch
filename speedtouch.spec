@@ -1,12 +1,12 @@
 Summary:	ALCATEL SpeedTouch USB ADSL modem user-space driver
 Summary(pl):	Sterownik przestrzeni u¿ytkownika dla modemów ADSL ALCATEL SpeedTouch na USB
 Name:		speedtouch
-Version:	1.3
+Version:	1.3.1
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}.tar.bz2
-# Source0-md5:	51012dc3f19297d2fd31bb79e3e2040f
+# Source0-md5:	0848a120ae0eeab6c8ab378e11dc4fa2
 Patch0:		%{name}-do_not_strip_g.patch
 URL:		http://speedtouch.sf.net/
 BuildRequires:	autoconf
