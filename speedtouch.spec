@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}.tar.bz2
 # Source0-md5:	51012dc3f19297d2fd31bb79e3e2040f
+Patch0:		%{name}-do_not_strip_g.patch
 URL:		http://speedtouch.sf.net/
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,9 +36,11 @@ Uwaga: modem_run potrzebuje pliku z firmware modemu od Alcatela
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 cp -f /usr/share/automake/config.* .
+%{__autoconf}
 %configure \
 	--enable-syslog \
 	--enable-install=`id -nu`
