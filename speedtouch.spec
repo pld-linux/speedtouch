@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}.tar.bz2
 # Source0-md5:	51012dc3f19297d2fd31bb79e3e2040f
 Patch0:		%{name}-do_not_strip_g.patch
 URL:		http://speedtouch.sf.net/
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
