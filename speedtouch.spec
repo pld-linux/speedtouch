@@ -39,6 +39,7 @@ Uwaga: modem_run potrzebuje pliku z firmware modemu od Alcatela
 %prep
 %setup -q
 %patch0 -p0
+sed -i 's/static int verbose/int verbose/' src/modem_run.c
 
 %build
 cp -f /usr/share/automake/config.* .
