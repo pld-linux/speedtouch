@@ -8,9 +8,10 @@ Group:		Applications/System
 Source0:	http://dl.sourceforge.net/speedtouch/%{name}-%{version}.tar.bz2
 # Source0-md5:	0848a120ae0eeab6c8ab378e11dc4fa2
 Patch0:		%{name}-do_not_strip_g.patch
-URL:		http://speedtouch.sf.net/
+URL:		http://speedtouch.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	sed >= 4.0
 Requires:	ppp-plugin-pppoatm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
