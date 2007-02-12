@@ -1,5 +1,5 @@
 Summary:	ALCATEL SpeedTouch USB ADSL modem user-space driver
-Summary(pl):	Sterownik przestrzeni uøytkownika dla modemÛw ADSL ALCATEL SpeedTouch na USB
+Summary(pl.UTF-8):   Sterownik przestrzeni u≈ºytkownika dla modem√≥w ADSL ALCATEL SpeedTouch na USB
 Name:		speedtouch
 Version:	1.3.1
 Release:	2
@@ -25,13 +25,13 @@ using kernel mode drivers (speedtch and pppoatm).
 Note: modem_run needs file with modem firmware from Alcatel (mgmt.o,
 alcaudsl.sys or firmware.bin).
 
-%description -l pl
-Dzia≥aj±cy w przestrzeni uøytkownika sterownik dla modemÛw ADSL
-ALCATEL SpeedTouch pod≥±czanych przez port USB. Ten pakiet zawiera
-ca≥e oprogramowanie potrzebne do uøywania modemu SpeedTouch USB pod
-Linuksem. Aktualnie obs≥uguje tylko opakowanie PPPoA. Zawiera takøe
-narzÍdzie modem_run niezbÍdne do wczytywania firmware modemu w
-przypadku uøywania sterownikÛw w przestrzeni j±dra (speedtch i
+%description -l pl.UTF-8
+Dzia≈ÇajƒÖcy w przestrzeni u≈ºytkownika sterownik dla modem√≥w ADSL
+ALCATEL SpeedTouch pod≈ÇƒÖczanych przez port USB. Ten pakiet zawiera
+ca≈Çe oprogramowanie potrzebne do u≈ºywania modemu SpeedTouch USB pod
+Linuksem. Aktualnie obs≈Çuguje tylko opakowanie PPPoA. Zawiera tak≈ºe
+narzƒôdzie modem_run niezbƒôdne do wczytywania firmware modemu w
+przypadku u≈ºywania sterownik√≥w w przestrzeni jƒÖdra (speedtch i
 pppoatm).
 
 Uwaga: modem_run potrzebuje pliku z firmware modemu od Alcatela
