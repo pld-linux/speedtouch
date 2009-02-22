@@ -1,3 +1,4 @@
+### OBSOLETE ###
 Summary:	ALCATEL SpeedTouch USB ADSL modem user-space driver
 Summary(pl.UTF-8):	Sterownik przestrzeni użytkownika dla modemów ADSL ALCATEL SpeedTouch na USB
 Name:		speedtouch
